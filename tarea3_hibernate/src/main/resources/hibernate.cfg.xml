@@ -11,7 +11,7 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format.sql">true</property>
         <property name ="hibernate.hbm2ddl.auto">create</property>
-        <mapping class="Tarea1.Alumno"/>
-        <mapping class="Tarea1.Matricula"/>
+        <mapping class="Tarea3.Profesor"/>
+        <mapping class="Tarea3.CorreoElectronico"/>
     </session-factory>
 </hibernate-configuration>

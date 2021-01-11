@@ -6,11 +6,11 @@
 		<property name="nombre"/>
 		<property name="ape1"/>
 		<property name="ape2"/>
-		<set name="correosElectronicos" cascade="all" inverse="true">
+		<set name="correosElectronicos" cascade="all" inverse="false">
 			<key>
-				<column name="idProfesor"/>
+				<column name="IDProfesor"/>
 			</key>
-			<one-to-many class="Tarea4.CorreoElectronico"/>
+			<one-to-many class="Tarea3.CorreoElectronico"/>
 		</set>
 	</class>
 </hibernate-mapping>

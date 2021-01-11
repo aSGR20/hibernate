@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,23 +16,47 @@ import javax.persistence.Table;
 public class CorreoElectronico implements Serializable {
 
     @Id
-    @Column(name="IdCorreo")
-    private int idCorreo;
+    @Column(name="IDCorreo")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int IDCorreo;
 
-    @Column(name="DireccionCorreo")
+    @Column(name="CorreoElectronico")
      private String direccionCorreo;
 
      @ManyToOne
-     @JoinColumn(name="IdProfesor")
+     @JoinColumn(name="IDProfesor")
      private Profesor profesor;
 
      public CorreoElectronico() {
 
      }
 
-     public CorreoElectronico(int idCorreo,String direccionCorreo,Profesor profesor) {
-         this.idCorreo=idCorreo;
+     public CorreoElectronico(String direccionCorreo, Profesor profesor) {
          this.direccionCorreo=direccionCorreo;
          this.profesor=profesor;
+     }
+     
+     public int getIdCorreo() {
+		return IDCorreo;
+	}
+
+	public void setIdCorreo(int idCorreo) {
+		this.IDCorreo = idCorreo;
+	}
+
+	public String getDireccionCorreo() {
+		return direccionCorreo;
+	}
+
+	public void setDireccionCorreo(String direccionCorreo) {
+		this.direccionCorreo = direccionCorreo;
+	}
+
+	public Profesor getProfesor() {
+    	 return profesor;
+     }
+     
+     public void setProfesor(Profesor profesor) {
+    	 this.profesor = profesor;
      }
  }
