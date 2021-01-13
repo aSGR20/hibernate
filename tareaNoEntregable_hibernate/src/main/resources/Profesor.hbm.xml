@@ -9,7 +9,7 @@
     </class>
     
     
-    <query name="findAllProfesores"><![CDATA[
+    <query name="mostrarProfesores"><![CDATA[
         SELECT p FROM Profesor p
     ]]></query>       
 </hibernate-mapping>

@@ -15,7 +15,7 @@ public class Main {
 			Session session = sessionFactory.openSession();
 			Transaction tx = session.beginTransaction();
 			
-			Query query = session.getNamedQuery("findAllProfesores");
+			Query query = session.getNamedQuery("mostrarProfesores");
 			List<Profesor> profesores = query.list();
 			for (Profesor profesor : profesores) {
 				System.out.println(profesor.toString());
