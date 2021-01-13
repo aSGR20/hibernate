@@ -10,18 +10,18 @@ import javax.persistence.*;
 public class Profesor implements Serializable  {
 
     @Id
-    @Column(name="IDProfesor")
+    @Column(name="Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int IDProfesor;
+    private int id;
 
     @Column(name="Nombre")
      private String nombre;
 
      @Column(name="Apellido1")
-     private String ape1;
+     private String apellido1;
 
      @Column(name="Apellido2")
-     private String ape2;
+     private String apellido2;
 
      @OneToMany(mappedBy="profesor", cascade= CascadeType.ALL)
      private Set<CorreoElectronico> correosElectronicos;
@@ -30,18 +30,18 @@ public class Profesor implements Serializable  {
      public Profesor(){
      }
 
-     public Profesor(String nombre, String ape1, String ape2) {
+     public Profesor(String nombre, String apellido1, String apellido2) {
          this.nombre = nombre;
-         this.ape1 = ape1;
-         this.ape2 = ape2;
+         this.apellido1 = apellido1;
+         this.apellido2 = apellido2;
      }
      
      public int getId() {
-		return IDProfesor;
+		return id;
 	}
 
 	public void setId(int id) {
-		this.IDProfesor = id;
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -53,19 +53,19 @@ public class Profesor implements Serializable  {
 	}
 
 	public String getApe1() {
-		return ape1;
+		return apellido1;
 	}
 
-	public void setApe1(String ape1) {
-		this.ape1 = ape1;
+	public void setApe1(String apellido1) {
+		this.apellido1 = apellido1;
 	}
 
 	public String getApe2() {
-		return ape2;
+		return apellido2;
 	}
 
-	public void setApe2(String ape2) {
-		this.ape2 = ape2;
+	public void setApe2(String apellido2) {
+		this.apellido2 = apellido2;
 	}
 
 	public Set<CorreoElectronico> getCorreoElectronico(){
