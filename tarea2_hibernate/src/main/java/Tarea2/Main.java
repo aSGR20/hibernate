@@ -18,7 +18,7 @@ public class Main {
 	private static File fichero = new File(".\\Alumnado_nuevo.txt");
 
 	public static void main(String[] args) {
-    	//Método para crear la tabla con los usuarios
+    	//Mï¿½todo para crear la tabla con los usuarios
     	try {
 			crearTablaSuperusuarios(fichero);
 		} catch (IOException e) {
@@ -30,7 +30,7 @@ public class Main {
 	}
 	
 	/**
-	 * Método que pasa un fichero a variables, las guarda en un objeto <br>
+	 * Mï¿½todo que pasa un fichero a variables, las guarda en un objeto <br>
 	 * y ese objeto las suba una BBDD llamada bd_neptuno
 	 * @param fichero
 	 * @throws IOException
@@ -40,10 +40,10 @@ public class Main {
     	StandardServiceRegistry sr = new StandardServiceRegistryBuilder().configure().build();
     	SessionFactory sf = new MetadataSources(sr).buildMetadata().buildSessionFactory();
     	
-    	//Abrir sesión
+    	//Abrir sesiï¿½n
     	Session session = sf.openSession();
     	
-    	//Iniciar transacción
+    	//Iniciar transacciï¿½n
     	session.getTransaction().begin();
     	//Declara variables, lee el fichero y guarda el objeto
 		String nombre, apell, linea, user;
@@ -65,7 +65,7 @@ public class Main {
 		//Commit transaction
     	session.getTransaction().commit();
     	
-    	//Cierra sesión y SessionFactory
+    	//Cierra sesiï¿½n y SessionFactory
     	session.close();
     	sf.close();
 	}
