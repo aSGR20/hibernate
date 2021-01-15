@@ -1,4 +1,4 @@
-package TareaNoEntregable;
+package Tarea5;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

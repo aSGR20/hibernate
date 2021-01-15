@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="TareaNoEntregable.Profesor">
+    <class name="Tarea5.Profesor">
         <id column="Id" name="id" type="integer"/>
         <property name="Nombre"/>
         <property name="Apellido1"/>
@@ -11,5 +11,5 @@
     
     <query name="mostrarProfesores"><![CDATA[
         SELECT p FROM Profesor p
-    ]]></query>       
+    ]]></query>
 </hibernate-mapping>
