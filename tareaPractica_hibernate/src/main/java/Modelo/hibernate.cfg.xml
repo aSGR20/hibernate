@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/bd_neptuno</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_schema">bd_neptuno</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.format.sql">true</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="Modelo/Importes.hbm.xml"/>
+        <mapping resource="Modelo/Totales.hbm.xml"/>
+        <mapping resource="Modelo/Categorias.hbm.xml"/>
+        <mapping resource="Modelo/Proveedores.hbm.xml"/>
+        <mapping resource="Modelo/Pedidos.hbm.xml"/>
+        <mapping resource="Modelo/ProductosNew.hbm.xml"/>
+        <mapping resource="Modelo/Detalles.hbm.xml"/>
+        <mapping resource="Modelo/Envios.hbm.xml"/>
+        <mapping resource="Modelo/TotalesMensuales.hbm.xml"/>
+        <mapping resource="Modelo/Clientes.hbm.xml"/>
+        <mapping resource="Modelo/CategoriasNew.hbm.xml"/>
+        <mapping resource="Modelo/Productos.hbm.xml"/>
+        <mapping resource="Modelo/ProveedoresNew.hbm.xml"/>
+        <mapping resource="Modelo/Superusuarios.hbm.xml"/>
+        <mapping resource="Modelo/Empleados.hbm.xml"/>
+        <mapping resource="Modelo/Usuarios.hbm.xml"/>
+        <mapping resource="Modelo/Clavesanteriores.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
